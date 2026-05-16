@@ -7,8 +7,13 @@
       name="description"
       content="Unofficial sample website concept for Nova Plumbing Solutions, a plumbing service in Hoboken, NJ."
     />
-    <title>Nova Plumbing Solutions | Hoboken, NJ Plumbing</title>
-    <link rel="preconnect" href="https://images.unsplash.com" />
+    <title>Nova Plumbing Solutions | Hoboken Plumbing Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -24,106 +29,127 @@
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
         <span></span>
         <span></span>
-        <span></span>
       </button>
 
       <nav class="site-nav" data-nav>
         <a href="#services">Services</a>
-        <a href="#why-us">Why us</a>
-        <a href="#area">Service area</a>
-        <a class="nav-call" href="tel:+12019085535">(201) 908-5535</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#area">Service Area</a>
+        <a href="#contact">Contact</a>
       </nav>
+
+      <a class="header-call" href="tel:+12019085535">(201) 908-5535</a>
     </header>
 
     <main id="top">
       <section class="hero">
-        <div class="hero-media" aria-hidden="true"></div>
-        <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="eyebrow">Hoboken NJ plumbing service</p>
-          <h1>Nova Plumbing Solutions</h1>
+          <p class="eyebrow">Hoboken, NJ plumbing support</p>
+          <h1>Fast, professional plumbing help when your home or business needs it.</h1>
           <p class="hero-copy">
-            Responsive plumbing help for leaks, repairs, fixtures, drains, and everyday plumbing problems across
-            Hoboken and nearby Hudson County communities.
+            A clean one-page concept for Nova Plumbing Solutions, presenting dependable plumbing repairs,
+            installations, and maintenance across Hoboken and nearby Hudson County communities.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="tel:+12019085535">Call (201) 908-5535</a>
-            <a class="button secondary" href="#contact">Request service</a>
+            <a class="button secondary" href="#services">View Services</a>
           </div>
         </div>
-        <aside class="hero-card" aria-label="Quick service details">
-          <span>Local plumbing support</span>
-          <strong>Hoboken homes, apartments, condos, and small businesses</strong>
-          <a href="#services">View services</a>
-        </aside>
+
+        <div class="hero-panel" aria-label="Plumbing service highlights">
+          <div class="status-card">
+            <span class="pulse"></span>
+            <div>
+              <strong>Responsive service</strong>
+              <p>Repair-first help for leaks, drains, fixtures, and urgent plumbing issues.</p>
+            </div>
+          </div>
+          <div class="metric-grid">
+            <div>
+              <strong>Local</strong>
+              <span>Hoboken based</span>
+            </div>
+            <div>
+              <strong>Clean</strong>
+              <span>Respectful work</span>
+            </div>
+            <div>
+              <strong>Clear</strong>
+              <span>Upfront guidance</span>
+            </div>
+            <div>
+              <strong>Ready</strong>
+              <span>Homes & shops</span>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="section services" id="services">
+      <section class="services section" id="services">
         <div class="section-heading">
           <p class="eyebrow">Services</p>
-          <h2>Plumbing help for the issues that disrupt your day.</h2>
+          <h2>Plumbing work for everyday fixes and bigger projects.</h2>
         </div>
         <div class="service-grid">
           <article class="service-card">
             <span class="icon">01</span>
-            <h3>Leak repairs</h3>
-            <p>Diagnosis and repair for visible leaks, dripping fixtures, pipe issues, and water damage concerns.</p>
+            <h3>Leak Repair</h3>
+            <p>Diagnosis and repair for dripping fixtures, pipe leaks, running toilets, and water line issues.</p>
           </article>
           <article class="service-card">
             <span class="icon">02</span>
-            <h3>Drain clearing</h3>
-            <p>Kitchen, bath, laundry, and floor drain service for slow drains, clogs, and recurring backups.</p>
+            <h3>Drain Cleaning</h3>
+            <p>Help with slow sinks, clogged tubs, blocked kitchen drains, and recurring backup problems.</p>
           </article>
           <article class="service-card">
             <span class="icon">03</span>
-            <h3>Fixture installs</h3>
-            <p>Faucets, sinks, toilets, shower trim, disposals, and appliance water line connections.</p>
+            <h3>Fixtures & Installs</h3>
+            <p>Installation and replacement for faucets, toilets, valves, garbage disposals, and bathroom fixtures.</p>
           </article>
           <article class="service-card">
             <span class="icon">04</span>
-            <h3>Water heaters</h3>
-            <p>Service coordination for water heater problems, replacement planning, and hot water troubleshooting.</p>
+            <h3>Water Heaters</h3>
+            <p>Support for water heater troubleshooting, replacement planning, and routine maintenance needs.</p>
           </article>
         </div>
       </section>
 
-      <section class="section split" id="why-us">
-        <div class="image-panel">
-          <img
-            src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1200&q=80"
-            alt="Plumber working under a sink"
-          />
-        </div>
-        <div class="split-content">
+      <section class="why section" id="why-us">
+        <div class="why-copy">
           <p class="eyebrow">Why choose us</p>
-          <h2>Clear communication, careful work, and a cleaner finish.</h2>
-          <div class="reason-list">
-            <div>
-              <h3>Fast scheduling</h3>
-              <p>Simple phone-first contact for urgent leaks, clogged drains, and repair needs.</p>
-            </div>
-            <div>
-              <h3>Practical recommendations</h3>
-              <p>Repair-focused guidance with clear next steps before work begins.</p>
-            </div>
-            <div>
-              <h3>Built for city properties</h3>
-              <p>Service messaging tailored to apartments, condos, brownstones, and compact commercial spaces.</p>
-            </div>
+          <h2>Built around clear communication and tidy, practical plumbing work.</h2>
+          <p>
+            Customers want a plumber who responds, explains the issue plainly, protects the space, and leaves
+            the repair ready for everyday use. This concept highlights that experience with a calm, professional
+            structure suited to residential and light commercial service.
+          </p>
+        </div>
+        <div class="why-list">
+          <div>
+            <h3>Local familiarity</h3>
+            <p>Service language tailored for apartments, brownstones, condos, restaurants, and retail spaces.</p>
+          </div>
+          <div>
+            <h3>Repair-focused approach</h3>
+            <p>Clear diagnosis before recommendations, with options presented in straightforward terms.</p>
+          </div>
+          <div>
+            <h3>Professional presence</h3>
+            <p>Modern visual design that makes phone calls, service details, and location information easy to find.</p>
           </div>
         </div>
       </section>
 
-      <section class="section area" id="area">
+      <section class="area section" id="area">
         <div>
           <p class="eyebrow">Service area</p>
           <h2>Serving Hoboken and nearby Hudson County neighborhoods.</h2>
           <p>
-            This concept site presents Nova Plumbing Solutions as a local plumbing option for Hoboken, Jersey City,
-            Weehawken, Union City, and surrounding communities.
+            Nova Plumbing Solutions is presented here as a Hoboken-focused plumbing service for homes,
+            apartments, storefronts, and small commercial properties.
           </p>
         </div>
-        <div class="area-list" aria-label="Highlighted service areas">
+        <div class="area-map" aria-label="Service area list">
           <span>Hoboken</span>
           <span>Jersey City</span>
           <span>Weehawken</span>
@@ -133,18 +159,42 @@
         </div>
       </section>
 
-      <section class="contact" id="contact">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Need a plumber in Hoboken?</h2>
-          <p>Call Nova Plumbing Solutions to discuss service availability, repair needs, and next steps.</p>
+      <section class="contact section" id="contact">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Need plumbing help in Hoboken?</h2>
+            <p>
+              Call the listed number or send a quick message with the issue, location, and preferred time.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button primary" href="tel:+12019085535">Call (201) 908-5535</a>
+            <a class="button secondary" href="https://novaplumbingsolutionsserv.com/">Current Website</a>
+          </div>
+          <form class="contact-form" data-contact-form>
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" autocomplete="tel" required />
+            </label>
+            <label class="full">
+              Message
+              <textarea name="message" rows="4" placeholder="Briefly describe the plumbing issue"></textarea>
+            </label>
+            <button class="button primary full" type="submit">Prepare Message</button>
+            <p class="form-status" role="status" data-form-status></p>
+          </form>
         </div>
-        <a class="button primary dark" href="tel:+12019085535">Call (201) 908-5535</a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span data-year></span> Nova Plumbing Solutions. Unofficial sample website concept.</p>
+      <p>Nova Plumbing Solutions · Hoboken, NJ · <a href="tel:+12019085535">(201) 908-5535</a></p>
+      <small>Unofficial sample website concept.</small>
     </footer>
 
     <script src="script.js"></script>

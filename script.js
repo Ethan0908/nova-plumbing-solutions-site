@@ -1,29 +1,52 @@
-const header = document.querySelector("[data-header]");
-const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
-const year = document.querySelector("[data-year]");
+const nav = document.querySelector("[data-nav]");
+const header = document.querySelector("[data-header]");
+const form = document.querySelector("[data-contact-form]");
+const formStatus = document.querySelector("[data-form-status]");
 
-function syncHeaderState() {
-  header.classList.toggle("is-scrolled", window.scrollY > 12);
+if (navToggle && nav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+  });
+
+  nav.addEventListener("click", (event) => {
+    if (event.target instanceof HTMLAnchorElement) {
+      nav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open navigation");
+    }
+  });
 }
 
-year.textContent = new Date().getFullYear();
-syncHeaderState();
+if (header) {
+  const updateHeader = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  };
 
-window.addEventListener("scroll", syncHeaderState, { passive: true });
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+}
 
-navToggle.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("is-open");
-  header.classList.toggle("is-open", isOpen);
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-  navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-});
+if (form && formStatus) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-nav.addEventListener("click", (event) => {
-  if (event.target.matches("a")) {
-    nav.classList.remove("is-open");
-    header.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
-    navToggle.setAttribute("aria-label", "Open navigation");
-  }
-});
+    const data = new FormData(form);
+    const name = String(data.get("name") || "").trim();
+    const phone = String(data.get("phone") || "").trim();
+    const message = String(data.get("message") || "").trim();
+
+    const body = [
+      `Name: ${name}`,
+      `Phone: ${phone}`,
+      message ? `Message: ${message}` : "Message: Plumbing service request",
+    ].join("\r\n");
+
+    formStatus.textContent = "Your message is ready to send from your email app.";
+    window.location.href = `mailto:info@novaplumbingsolutionsserv.com?subject=${encodeURIComponent(
+      "Plumbing Service Request"
+    )}&body=${encodeURIComponent(body)}`;
+  });
+}
