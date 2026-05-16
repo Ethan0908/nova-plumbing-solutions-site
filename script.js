@@ -4,18 +4,33 @@ const header = document.querySelector("[data-header]");
 const form = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
 
+const closeNav = () => {
+  if (!navToggle || !nav) return;
+
+  nav.classList.remove("is-open");
+  document.body.classList.remove("nav-open");
+  navToggle.setAttribute("aria-expanded", "false");
+  navToggle.setAttribute("aria-label", "Open navigation");
+};
+
 if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
+
+    document.body.classList.toggle("nav-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
     navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
   });
 
   nav.addEventListener("click", (event) => {
     if (event.target instanceof HTMLAnchorElement) {
-      nav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-      navToggle.setAttribute("aria-label", "Open navigation");
+      closeNav();
+    }
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeNav();
     }
   });
 }
@@ -36,15 +51,17 @@ if (form && formStatus) {
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
     const phone = String(data.get("phone") || "").trim();
+    const service = String(data.get("service") || "").trim();
     const message = String(data.get("message") || "").trim();
 
     const body = [
       `Name: ${name}`,
       `Phone: ${phone}`,
+      `Service needed: ${service}`,
       message ? `Message: ${message}` : "Message: Plumbing service request",
     ].join("\r\n");
 
-    formStatus.textContent = "Your message is ready to send from your email app.";
+    formStatus.textContent = "Opening your email app with the service request prepared.";
     window.location.href = `mailto:info@novaplumbingsolutionsserv.com?subject=${encodeURIComponent(
       "Plumbing Service Request"
     )}&body=${encodeURIComponent(body)}`;
