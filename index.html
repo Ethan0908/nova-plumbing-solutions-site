@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Unofficial sample website concept for Nova Plumbing Solutions, a plumbing service in Hoboken, NJ.">
+    <title>Nova Plumbing Solutions | Hoboken Plumbing Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Nova Plumbing Solutions home">
+        <span class="brand-mark">N</span>
+        <span>
+          <strong>Nova Plumbing</strong>
+          <small>Solutions</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" data-nav>
+        <a href="#services">Services</a>
+        <a href="#why-us">Why us</a>
+        <a href="#area">Service area</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="header-call" href="tel:12019085535">(201) 908-5535</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-band">
+        <div class="hero-bg" aria-hidden="true">
+          <svg viewBox="0 0 900 620" role="img" aria-label="Modern plumbing installation illustration">
+            <defs>
+              <linearGradient id="pipeGlow" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#78d0ff"/>
+                <stop offset="1" stop-color="#0a6d9e"/>
+              </linearGradient>
+              <linearGradient id="wallShade" x1="0" x2="1">
+                <stop offset="0" stop-color="#f6fbff"/>
+                <stop offset="1" stop-color="#dcecf5"/>
+              </linearGradient>
+            </defs>
+            <rect width="900" height="620" fill="url(#wallShade)"/>
+            <path d="M0 455 C150 420 230 510 375 472 C540 429 624 329 900 376 L900 620 L0 620 Z" fill="#cfe6f4"/>
+            <rect x="124" y="82" width="252" height="360" rx="26" fill="#ffffff" stroke="#bfd5e0" stroke-width="4"/>
+            <rect x="162" y="128" width="176" height="128" rx="16" fill="#ecf7fc"/>
+            <circle cx="250" cy="332" r="64" fill="#e8f5fb" stroke="#1c739f" stroke-width="12"/>
+            <circle cx="250" cy="332" r="26" fill="#1c739f"/>
+            <path d="M376 178 H604 C657 178 700 221 700 274 V331" fill="none" stroke="#1c739f" stroke-width="38" stroke-linecap="round"/>
+            <path d="M376 178 H604 C657 178 700 221 700 274 V331" fill="none" stroke="url(#pipeGlow)" stroke-width="22" stroke-linecap="round"/>
+            <path d="M700 331 V430 C700 479 740 519 789 519 H862" fill="none" stroke="#1c739f" stroke-width="38" stroke-linecap="round"/>
+            <path d="M700 331 V430 C700 479 740 519 789 519 H862" fill="none" stroke="url(#pipeGlow)" stroke-width="22" stroke-linecap="round"/>
+            <rect x="580" y="303" width="239" height="66" rx="33" fill="#ffffff" stroke="#bfd5e0" stroke-width="4"/>
+            <circle cx="636" cy="336" r="18" fill="#0f9f89"/>
+            <circle cx="701" cy="336" r="18" fill="#e4aa25"/>
+            <circle cx="766" cy="336" r="18" fill="#1c739f"/>
+            <path d="M532 92 L575 92 L575 135 L532 135 Z" fill="#0f9f89"/>
+            <path d="M732 130 L796 130 L796 194 L732 194 Z" fill="#ffffff" stroke="#bfd5e0" stroke-width="4"/>
+            <path d="M747 162 H781 M764 145 V179" stroke="#1c739f" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Plumbing service in Hoboken, NJ</p>
+          <h1>Nova Plumbing Solutions</h1>
+          <p class="hero-copy">Responsive plumbing support for busy homes, apartments, and small businesses across Hoboken and nearby Hudson County neighborhoods.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="tel:12019085535">Call (201) 908-5535</a>
+            <a class="button secondary" href="#services">View services</a>
+          </div>
+          <div class="hero-stats" aria-label="Service highlights">
+            <span><strong>Leak repair</strong><small>Fast diagnostics</small></span>
+            <span><strong>Fixture installs</strong><small>Clean finishes</small></span>
+            <span><strong>Drain service</strong><small>Practical fixes</small></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-strip" aria-label="Quick contact details">
+        <div>
+          <span>Serving Hoboken</span>
+          <strong>Residential and light commercial plumbing</strong>
+        </div>
+        <div>
+          <span>Phone</span>
+          <strong><a href="tel:12019085535">(201) 908-5535</a></strong>
+        </div>
+        <div>
+          <span>Website concept</span>
+          <strong>Static, mobile-ready layout</strong>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2>Everyday plumbing work handled with care</h2>
+          <p>Clear communication, tidy work areas, and durable repairs for common plumbing issues.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="icon">01</span>
+            <h3>Leak Detection & Repair</h3>
+            <p>Find the source of drips, stains, damp cabinetry, and pressure changes before damage spreads.</p>
+          </article>
+          <article class="service-card">
+            <span class="icon">02</span>
+            <h3>Drain Clearing</h3>
+            <p>Restore slow sinks, tubs, showers, and kitchen drains with practical troubleshooting.</p>
+          </article>
+          <article class="service-card">
+            <span class="icon">03</span>
+            <h3>Fixture Installation</h3>
+            <p>Install faucets, toilets, garbage disposals, valves, and supply lines with a clean finish.</p>
+          </article>
+          <article class="service-card">
+            <span class="icon">04</span>
+            <h3>Water Heater Support</h3>
+            <p>Help with maintenance, common performance issues, and replacement planning.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="why-us">
+        <div class="panel-image" aria-hidden="true">
+          <div class="gauge">
+            <span></span>
+          </div>
+          <div class="pipe-card">
+            <strong>Clean work</strong>
+            <small>Protection for floors, walls, and fixtures</small>
+          </div>
+        </div>
+
+        <div class="section-heading align-left">
+          <p class="eyebrow">Why choose us</p>
+          <h2>A calm, organized approach to plumbing calls</h2>
+          <p>Plumbing problems are disruptive. This sample site positions Nova Plumbing Solutions around direct scheduling, practical repair options, and respect for Hoboken homes and buildings.</p>
+
+          <ul class="check-list">
+            <li>Focused service recommendations without overcomplicating the job.</li>
+            <li>Neat setup and cleanup for apartments, condos, and storefronts.</li>
+            <li>Helpful explanations before repair work begins.</li>
+            <li>Simple phone-first contact for urgent plumbing needs.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section area-section" id="area">
+        <div class="section-heading">
+          <p class="eyebrow">Service area</p>
+          <h2>Based around Hoboken and nearby communities</h2>
+          <p>Built for customers searching for a local plumber near the Hudson River waterfront, transit hubs, brownstones, and newer apartment buildings.</p>
+        </div>
+
+        <div class="area-layout">
+          <div class="map-card" aria-label="Service area map illustration">
+            <span class="river"></span>
+            <span class="route route-one"></span>
+            <span class="route route-two"></span>
+            <span class="pin main-pin">Hoboken</span>
+            <span class="pin north-pin">Weehawken</span>
+            <span class="pin west-pin">Jersey City</span>
+          </div>
+          <div class="area-copy">
+            <h3>Local coverage for common plumbing needs</h3>
+            <p>Use this one-page structure to quickly show availability for Hoboken, adjacent Jersey City neighborhoods, Weehawken, Union City, and nearby Hudson County addresses.</p>
+            <a class="text-link" href="tel:12019085535">Check availability by phone</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Need plumbing help in Hoboken?</h2>
+          <p>Call Nova Plumbing Solutions to discuss the issue, location, and next available service window.</p>
+        </div>
+        <a class="button primary light" href="tel:12019085535">Call (201) 908-5535</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span data-year></span> Nova Plumbing Solutions concept. Unofficial sample website concept.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
