@@ -3,11 +3,11 @@
 This is an unofficial sample/mockup website. Do not claim the business requested it.
 
 Business name: Nova Plumbing Solutions
-Trade or category: plumbers
-City: Hoboken NJ
+Trade or category: plumber
+City: Hoboken
 Phone: (201) 908-5535
 Current website: https://novaplumbingsolutionsserv.com/
-Address: 221 River St suite 436, Hoboken, NJ 07030, USA
+Address: Not provided
 
 Build a clean, modern one-page website.
 

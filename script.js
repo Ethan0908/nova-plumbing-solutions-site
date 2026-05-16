@@ -3,6 +3,7 @@ const nav = document.querySelector("[data-nav]");
 const header = document.querySelector("[data-header]");
 const form = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
+const revealItems = document.querySelectorAll(".reveal");
 
 const closeNav = () => {
   if (!navToggle || !nav) return;
@@ -16,7 +17,6 @@ const closeNav = () => {
 if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
-
     document.body.classList.toggle("nav-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
     navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
@@ -44,6 +44,24 @@ if (header) {
   window.addEventListener("scroll", updateHeader, { passive: true });
 }
 
+if ("IntersectionObserver" in window && revealItems.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      }
+    },
+    { threshold: 0.15 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
 if (form && formStatus) {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -58,10 +76,10 @@ if (form && formStatus) {
       `Name: ${name}`,
       `Phone: ${phone}`,
       `Service needed: ${service}`,
-      message ? `Message: ${message}` : "Message: Plumbing service request",
+      message ? `Message: ${message}` : "Message: Please contact me about this plumbing request.",
     ].join("\r\n");
 
-    formStatus.textContent = "Opening your email app with the service request prepared.";
+    formStatus.textContent = "Opening your email app with the request draft prepared.";
     window.location.href = `mailto:info@novaplumbingsolutionsserv.com?subject=${encodeURIComponent(
       "Plumbing Service Request"
     )}&body=${encodeURIComponent(body)}`;
